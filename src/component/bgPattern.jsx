@@ -1,8 +1,3 @@
-
-
-
-
-
 const BgPattern = ()=>{
     return(
        <section className="bg-pattern">
