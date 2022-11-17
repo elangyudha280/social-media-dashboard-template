@@ -13,8 +13,8 @@
   --Instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%);
   --YouTube: hsl(348, 97%, 39%);
 }
-html[data-color-mode='dark'] {
-  --Toggle: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%);
+html[data-colormode='dark'] {
+  --Toggle: hsl(146, 68%, 55%);
   --Bg: hsl(230, 17%, 14%);
   --topBgPattern: hsl(232, 19%, 15%);
   --cardBg: hsl(228, 28%, 20%);
@@ -28,7 +28,7 @@ html[data-color-mode='dark'] {
   box-sizing: border-box;
 }
 
-.root {
+#root {
   position: relative;
   width: 100%;
   height: 100vh;
@@ -87,12 +87,8 @@ html[data-color-mode='dark'] {
     background: var(--Toggle);
     transition: 0.4s;
 
-    &:hover {
-      background: hsl(146, 68%, 55%);
-    }
-    &:hover .toggle {
+    & .toggle-active {
       transform: translateX(120%);
-      background-color: hsl(230, 17%, 14%);
     }
 
     .toggle {
