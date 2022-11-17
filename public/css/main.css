@@ -28,4 +28,111 @@ html[data-color-mode='dark'] {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+
+.root {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: var(--Bg);
+}
+
+.nav-main {
+  padding: 1em 0;
+  font-family: var(--font);
+}
+
+.nav-main .left-nav {
+  padding: 0;
+}
+
+.nav-main .title-nav-main {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: var(--text2);
+}
+
+.nav-main .span-title {
+  margin-top: -5px;
+  font-size: 0.9em;
+  font-weight: 700;
+  margin-bottom: 0;
+  color: var(--text);
+}
+
+.nav-main .right-nav {
+  width: auto;
+  gap: 0.8em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.nav-main .dark-mode {
+  color: var(--text);
+  font-size: 0.9em;
+  font-weight: 700;
+}
+
+.nav-main .btn-dark-mode {
+  height: 100%;
+  width: 55px;
+  border-radius: 2em;
+  border: none;
+  padding: 0.3em;
+  position: relative;
+  background: var(--Toggle);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.nav-main .btn-dark-mode:hover {
+  background: #3eda82;
+}
+
+.nav-main .btn-dark-mode:hover .toggle {
+  -webkit-transform: translateX(120%);
+          transform: translateX(120%);
+  background-color: #1e202a;
+}
+
+.nav-main .btn-dark-mode .toggle {
+  display: block;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  width: 20px;
+  height: 20px;
+  background: var(--Bg);
+  border-radius: 50%;
+}
+
+@media only screen and (max-width: 500px) {
+  .nav-main .left-nav {
+    margin-bottom: 0.7em;
+    width: 100%;
+    padding-bottom: 1em;
+    -webkit-box-shadow: 0 0.1em 0 var(--text);
+            box-shadow: 0 0.1em 0 var(--text);
+  }
+  .nav-main .right-nav {
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .nav-main .title-nav-main {
+    font-size: 1.1em;
+  }
+  .nav-main .span-title {
+    font-size: 0.7em;
+  }
+}
 /*# sourceMappingURL=main.css.map */
