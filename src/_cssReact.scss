@@ -39,8 +39,9 @@ html[data-colormode='dark'] {
 
 .nav-main {
   padding: 1em 0;
+  border: 1px solid red;
   font-family: var(--font);
-
+  z-index: 5;
   .left-nav {
     padding: 0;
   }
@@ -100,6 +101,19 @@ html[data-colormode='dark'] {
       border-radius: 50%;
     }
   }
+}
+
+// CODE FOR SECTION BG PATTERN
+
+.bg-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  background: var(--topBgPattern);
+  height: 300px;
+  border: 1px solid cyan;
 }
 
 // media < 400px

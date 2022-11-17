@@ -38,7 +38,9 @@ html[data-colormode='dark'] {
 
 .nav-main {
   padding: 1em 0;
+  border: 1px solid red;
   font-family: var(--font);
+  z-index: 5;
 }
 
 .nav-main .left-nav {
@@ -104,6 +106,17 @@ html[data-colormode='dark'] {
   height: 20px;
   background: var(--Bg);
   border-radius: 50%;
+}
+
+.bg-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  background: var(--topBgPattern);
+  height: 300px;
+  border: 1px solid cyan;
 }
 
 @media only screen and (max-width: 500px) {
