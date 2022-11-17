@@ -15,7 +15,7 @@ const Navbar = ()=>{
     useEffect(()=>{
         let htmlSelector = document.querySelector('html');
         setDomHtml({htmlSelector})
-        
+
         return () =>{
                 return 
         }
@@ -27,8 +27,10 @@ const Navbar = ()=>{
         iconToggle.current.classList.toggle('toggle-active')
         if(domHtml.htmlSelector.dataset.colormode === 'light'){
             domHtml.htmlSelector.dataset.colormode = 'dark'
+            document.querySelector('.dark-mode').textContent ='Light Mode'
         }else{
             domHtml.htmlSelector.dataset.colormode = 'light'
+            document.querySelector('.dark-mode').textContent ='Dark Mode'
         }
         
     }
