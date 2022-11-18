@@ -6,6 +6,9 @@ import Navbar from './component/navbar.jsx'
 // import component bg pattern
 import BgPattern from './component/bgPattern.jsx'
 
+// import component social media container
+import SocialMediaContainer  from './component/socialMediaContainer.jsx';
+
 function App() {
   return (
       <>
@@ -13,6 +16,8 @@ function App() {
        <Navbar/>  
        {/* component bg pattern */}
        <BgPattern/>
+       {/* component social media container */}
+       <SocialMediaContainer/>
       </>
   );
 }
