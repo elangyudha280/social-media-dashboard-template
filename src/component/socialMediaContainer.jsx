@@ -1,7 +1,14 @@
 
 
+// component card item
+const CardItem = () =>{
+    return(
+        
+    )
+}
 
 
+//   component SocialMediaContainer 
 const SocialMediaContainer = ()=>{
     return (
         <section className="social-media-container container">
