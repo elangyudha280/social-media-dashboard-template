@@ -3,17 +3,7 @@
 // component card item
 const CardItem = () =>{
     return(
-        
-    )
-}
-
-
-//   component SocialMediaContainer 
-const SocialMediaContainer = ()=>{
-    return (
-        <section className="social-media-container container">
-            <div className="card-container">
-                <div className="card-item">
+        <div className="card-item"> 
                     <div className="header-card-icon">
                         <img src="assets/images/icon-facebook.svg" alt="" />
                         <span className="username-social-media">
@@ -28,11 +18,19 @@ const SocialMediaContainer = ()=>{
                         12 today
                         </span>
                     </div>
-                </div>
-                <div className="card-item"></div>
-                <div className="card-item"></div>
-                <div className="card-item"></div>
-            </div>
+        </div>
+    )
+}
+
+
+//   component SocialMediaContainer 
+const SocialMediaContainer = ()=>{
+    return (
+        <section className="social-media-container container">
+            <CardItem/>
+            <CardItem/>
+            <CardItem/>
+            <CardItem/>
         </section>
     )
 }
