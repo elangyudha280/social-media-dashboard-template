@@ -154,6 +154,19 @@ body {
       font-family: var(--font);
       transition: 0.3s;
 
+      animation: show 1s cubic-bezier(1, -0.52, 0.04, 1.42) forwards;
+      @keyframes show {
+        from {
+          opacity: 0;
+          transform: translateY(-100px);
+        }
+        to {
+          opacity: 1;
+
+          transform: translateY(0);
+        }
+      }
+
       &:hover {
         background: var(--hover);
       }
@@ -243,7 +256,17 @@ body {
   position: relative;
   margin-top: 3em;
   padding: 0;
-
+  opacity: 0;
+  animation: showO 1s cubic-bezier(1, -0.52, 0.04, 1.42) forwards;
+  animation-delay: 0.4s;
+  @keyframes showO {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
   // title overview
   .title-overview {
     font-familiy: var(--font);

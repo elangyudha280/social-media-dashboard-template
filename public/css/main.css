@@ -155,6 +155,34 @@ body {
   font-family: var(--font);
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  -webkit-animation: show 1s cubic-bezier(1, -0.52, 0.04, 1.42) forwards;
+          animation: show 1s cubic-bezier(1, -0.52, 0.04, 1.42) forwards;
+}
+
+@-webkit-keyframes show {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 
 .social-media-container .card-container .card-item:hover {
@@ -264,6 +292,29 @@ body {
   position: relative;
   margin-top: 3em;
   padding: 0;
+  opacity: 0;
+  -webkit-animation: showO 1s cubic-bezier(1, -0.52, 0.04, 1.42) forwards;
+          animation: showO 1s cubic-bezier(1, -0.52, 0.04, 1.42) forwards;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+@-webkit-keyframes showO {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes showO {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .container-overview .title-overview {
