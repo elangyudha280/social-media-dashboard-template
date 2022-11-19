@@ -1,16 +1,19 @@
 
 
 // component card item
-const CardItem = ({totalFollowers,userNameSocialMedia,countFollowers,urlImg,textFollowers,countImg}) =>{
+const CardItem = ({totalFollowers,userNameSocialMedia,countFollowers,urlImg,textFollowers,countImg,idLineCard}) =>{
     return(
         <div className="card-item"> 
+                          <div className="line-card" id={idLineCard}>
+
+                          </div>
                     <div className="header-card-icon">
                         <img src={urlImg} alt="" />
                         <span className="username-social-media">
                             {userNameSocialMedia}
                         </span>
                     </div>
-                    <h2 className="followers text-center mt-3">{totalFollowers}</h2>
+                    <h2 className="followers text-center ">{totalFollowers}</h2>
                     <p className="text-followers text-center text-uppercase">{textFollowers}</p>
                     <div className="footer-card-icon">
                         <img src={countImg} alt="" />
@@ -34,7 +37,8 @@ const SocialMediaContainer = ()=>{
             textFollowers:'followers',
             urlImg:'assets/images/icon-facebook.svg',
             countImg:'assets/images/icon-up.svg',
-            countFollowers:'12 today'
+            countFollowers:'12 today',
+            idLineCard:'facebook'
         },
         {
             id:2,
@@ -43,7 +47,8 @@ const SocialMediaContainer = ()=>{
             textFollowers:'followers',
             urlImg:'assets/images/icon-twitter.svg',
             countImg:'assets/images/icon-up.svg',
-            countFollowers:'99 today'
+            countFollowers:'99 today',
+            idLineCard:'twitter'
         },
         {
             id:3,
@@ -52,7 +57,8 @@ const SocialMediaContainer = ()=>{
             textFollowers:'followers',
             urlImg:'assets/images/icon-instagram.svg',
             countImg:'assets/images/icon-up.svg',
-            countFollowers:'1099 today'
+            countFollowers:'1099 today',
+            idLineCard:'instagram'
         },
         {
             id:4,
@@ -61,7 +67,8 @@ const SocialMediaContainer = ()=>{
             textFollowers:'subscribers',
             urlImg:'assets/images/icon-youtube.svg',
             countImg:'assets/images/icon-down.svg',
-            countFollowers:'144 today'
+            countFollowers:'144 today',
+            idLineCard:'youtube'
         },
     ]
 
@@ -75,10 +82,11 @@ const SocialMediaContainer = ()=>{
                         key={e.id}
                         userNameSocialMedia={e.userNameSocialMedia}
                         totalFollowers={e.totalFollowers}
-                        textFollower={e.textFollowers}
+                        textFollowers={e.textFollowers}
                         urlImg={e.urlImg}
                         countImg={e.countImg}
                         countFollowers={e.countFollowers}
+                        idLineCard={e.idLineCard}
                         />
                     )
                 })
