@@ -5,7 +5,7 @@ const CardItem = ({totalFollowers,userNameSocialMedia,countFollowers,urlImg,text
     return(
         <div className="card-item"> 
                           <div className="line-card" id={idLineCard}>
-
+ 
                           </div>
                     <div className="header-card-icon">
                         <img src={urlImg} alt="" />
