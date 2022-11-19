@@ -1,4 +1,5 @@
 
+import {useState,useEffect} from 'react'
 
 // import component Navbar
 import Navbar from './component/navbar.jsx'
