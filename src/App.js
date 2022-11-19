@@ -9,6 +9,10 @@ import BgPattern from './component/bgPattern.jsx'
 // import component social media container
 import SocialMediaContainer  from './component/socialMediaContainer.jsx';
 
+// import component container overview
+import ContainerOverview from './component/containerOverview.jsx'
+
+
 function App() {
   return (
       <>
@@ -18,6 +22,8 @@ function App() {
        <BgPattern/>
        {/* component social media container */}
        <SocialMediaContainer/>
+       {/* component container overview */}
+       <ContainerOverview/>
       </>
   );
 }

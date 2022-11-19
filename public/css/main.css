@@ -40,12 +40,13 @@ body {
 #root {
   position: relative;
   width: 100%;
-  height: 100vh;
+  overflow-x: hidden;
+  height: auto;
+  padding-bottom: 2em;
 }
 
 .nav-main {
   padding: 1em 0;
-  border: 1px solid red;
   font-family: var(--font);
   z-index: 5;
 }
@@ -128,7 +129,7 @@ body {
 .social-media-container {
   position: relative;
   z-index: 3;
-  top: 100px;
+  margin-top: 90px;
   padding: 0;
 }
 
@@ -259,6 +260,125 @@ body {
   color: var(--down);
 }
 
+.container-overview {
+  position: relative;
+  margin-top: 3em;
+  padding: 0;
+}
+
+.container-overview .title-overview {
+  font-familiy: var(--font);
+  font-weight: 600;
+  color: var(--text2);
+}
+
+.container-overview .card-container-overview {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 130px;
+  gap: 1em;
+}
+
+.container-overview .card-container-overview .card-item-overview {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5em;
+  background: var(--cardBg);
+  padding: 1.5em;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.container-overview .card-container-overview .card-item-overview:hover {
+  background: var(--hover);
+}
+
+.container-overview .card-container-overview .card-item-overview .overview-header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5em;
+}
+
+.container-overview .card-container-overview .card-item-overview .overview-header .view-header {
+  margin: 0;
+  text-transform: capitalize;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.container-overview .card-container-overview .card-item-overview .overview-header img {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.container-overview .card-container-overview .card-item-overview .overview-footer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5em;
+  margin-top: 1.3em;
+}
+
+.container-overview .card-container-overview .card-item-overview .overview-footer .view-footer {
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  font-size: 2em;
+  color: var(--text2);
+}
+
+.container-overview .card-container-overview .card-item-overview .overview-footer .inner-overview-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.2em;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.container-overview .card-container-overview .card-item-overview .overview-footer .inner-overview-footer .count-overview-text {
+  height: 10px;
+  font-weight: 700;
+  color: var(--up);
+}
+
+.container-overview .card-container-overview .card-item-overview:nth-child(2) .overview-footer .count-overview-text,
+.container-overview .card-container-overview .card-item-overview:nth-child(7) .overview-footer .count-overview-text,
+.container-overview .card-container-overview .card-item-overview:nth-child(8) .overview-footer .count-overview-text {
+  color: var(--down);
+}
+
 @media screen and (max-width: 1000px) {
   .social-media-container .card-container {
     -webkit-box-align: center;
@@ -266,6 +386,11 @@ body {
             align-items: center;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
+    gap: 1em;
+  }
+  .container-overview .card-container-overview {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
     gap: 1em;
   }
 }
@@ -281,6 +406,14 @@ body {
             align-items: center;
     -ms-grid-columns: auto;
         grid-template-columns: auto;
+    gap: 1em;
+  }
+  .container-overview {
+    padding: 0 1em;
+  }
+  .container-overview .card-container-overview {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
     gap: 1em;
   }
 }
@@ -300,7 +433,7 @@ body {
             justify-content: space-between;
   }
   .social-media-container {
-    top: 70px;
+    margin-top: 70px;
   }
 }
 
