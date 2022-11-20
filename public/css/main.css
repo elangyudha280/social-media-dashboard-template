@@ -94,7 +94,7 @@ body {
   width: 55px;
   border-radius: 2em;
   border: none;
-  padding: 0.3em;
+  padding: 0.2em 0.3em;
   position: relative;
   background: var(--Toggle);
   -webkit-transition: 0.4s;
