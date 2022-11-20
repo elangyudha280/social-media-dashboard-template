@@ -16,7 +16,7 @@ const Navbar = ()=>{
     let textMode = useRef(null)
 
     // useState for data localstorage 
-    const [local,setLocal] = useState('')
+    const [local,setLocal] = useState('mode')
 
     useEffect(()=>{
         let htmlSelector = document.querySelector('html');
